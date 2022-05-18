@@ -20,7 +20,7 @@ All contributions are welcome:
 
 ## Python Cheatsheet
 
-- [About ![Binder](https://mybinder.org/v2/gh/wilfredinni/python-cheatsheet/master?filepath=jupyter_notebooks)](#about-)
+- [About](#about)
   - [Contribute](#contribute)
   - [Read It](#read-it)
   - [Python Cheatsheet](#python-cheatsheet)
@@ -1322,7 +1322,6 @@ If the value appears multiple times in the list, only the first instance of the 
 
 [_Return to the Top_](#python-cheatsheet)
 
-
 ### Removing Values from Lists with pop()
 
 ```python
@@ -2328,6 +2327,9 @@ A List comprehension can be generated from a dictionary:
 | `\t`             | Tab                  |
 | `\n`             | Newline (line break) |
 | `\\`             | Backslash            |
+| `\b`             | Backspace            |
+| `\ooo`           | Octal value          |
+| `\r`             | Carriage Return      |
 
 Example:
 
