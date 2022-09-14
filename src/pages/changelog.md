@@ -9,6 +9,37 @@ updated: July 19, 2022
 
 <!-- ## [Unreleased](https://github.com/wilfredinni/python-cheatsheet/tree/next) -->
 
+## 2022-09-12
+
+- Added Python <router-link to='/cheatsheet/control-flow#python-switch-case-statements'>Switch-Case Statement</router-link> or **Structural Pattern Matching** ([6397b0f](https://github.com/wilfredinni/python-cheatsheet/commit/6397b0f1f9f5295dd53168eb2587a492ac4d4dfa)).
+
+## 2022-09-03
+
+### Website
+
+- Added font size controls for _Reader mode_ and updated navbar layout ([1978f69](https://github.com/wilfredinni/python-cheatsheet/commit/1978f693662d28cbe94a7c95377ce32e28d74ac4))
+- Added a Sponsor link to the navbar ([dd22f81](https://github.com/wilfredinni/python-cheatsheet/commit/dd22f81c509cfbcef4d5b4688fd4cfd9dfd5d1d7))
+- Added transitions for mobile navigation ([4cdfca4](https://github.com/wilfredinni/python-cheatsheet/commit/4cdfca4ba0f21e4cb1021b917e49660eccdefa7e))
+- Fixed an issue that prevented the sidebar to close on mobile navigation([48b58e0](https://github.com/wilfredinni/python-cheatsheet/commit/48b58e0beef8dfd15e5450087a125af4872422d0))
+
+### Cheatsheet
+
+- Simplify json load/dump usage ([#118](https://github.com/wilfredinni/python-cheatsheet/pull/118))
+
+## 2022-08-21
+
+### Website
+
+- Launched Python Cheatsheet [newsletter](https://news.pythoncheatsheet.org/) 🎉
+- Added a newsletter subscription form component.
+
+### Cheatsheet
+
+- Fixed many code examples, grammar and typo errors.
+- Added examples for:
+  - `split` method ([#107](https://github.com/wilfredinni/python-cheatsheet/pull/107))
+  - Built-in `all` , `any`, `ascii` and `eval` ([#115](https://github.com/wilfredinni/python-cheatsheet/pull/115))
+
 ## 2022-08-05
 
 ### Website
@@ -73,13 +104,13 @@ updated: July 19, 2022
 The release of the new **pythoncheatsheet.org** website:
 
 - Complete re-design with **Vue 3** and **Tailwind CSS**.
-- The site is now a **PWA** (Progressive web app) and can be installed in any platform that has a compatible web browser.It is also available offline.
+- The site is now a **PWA** (Progressive web app) and can be installed in any platform that has a compatible web browser. It is also available offline.
 - Added a **dark mode**.
 - Added a **reader mode**.
 - Added **Algolia search** (not available yet).
 - Added contributors to the index page 🥰
-- Added, fixed and removed code examples,
-- Added an **Edit this page on github** link on every page to make easier to contribute.
+- Added, fixed and removed code examples.
+- Added an **Edit this page on GitHub** link to make it easier to contribute.
 - Changed hosting to **Netlify** with an OSS plan 🎉
 - Removed and joined cheatsheet sections.
 - Fixed grammar and spelling mistakes.

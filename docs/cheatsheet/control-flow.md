@@ -126,7 +126,7 @@ The `else` statement executes only if the evaluation of the `if` and all the `el
 
 >>> if name == 'George':
 ...    print('Hi, George.')
->>> else:
+... else:
 ...    print('You are not George')
 ...
 # You are not George
@@ -139,7 +139,7 @@ Only after the `if` statement expression is `False`, the `elif` statement is eva
 
 >>> if name == 'Debora':
 ...    print('Hi Debora!')
->>> elif name == 'George':
+... elif name == 'George':
 ...    print('Hi George!')
 ...
 # Hi George!
@@ -152,9 +152,9 @@ the `elif` and `else` parts are optional.
 
 >>> if name == 'Debora':
 ...    print('Hi Debora!')
->>> elif name == 'George':
+... elif name == 'George':
 ...    print('Hi George!')
->>> else:
+... else:
 ...    print('Who are you?')
 ...
 # Who are you?
@@ -176,7 +176,7 @@ Example:
 >>> # this if statement:
 >>> if age < 18:
 ...    print('kid')
->>> else:
+... else:
 ...    print('adult')
 ...
 # output: kid
@@ -200,10 +200,141 @@ Ternary operators can be chained:
 ...         print('kid')
 ...     else:
 ...         print('teen')
->>> else:
+... else:
 ...     print('adult')
 ...
 # output: teen
+```
+
+## Switch-Case Statement
+
+<base-disclaimer>
+  <base-disclaimer-title>
+    Switch-Case statements
+  </base-disclaimer-title>
+  <base-disclaimer-content>
+  In computer programming languages, a switch statement is a type of selection control mechanism used to allow the value of a variable or expression to change the control flow of program execution via search and map.
+  </base-disclaimer-content>
+</base-disclaimer>
+
+The _Switch-Case statements_, or **Structural Pattern Matching**, was firstly introduced in 2020 via [PEP 622](https://peps.python.org/pep-0622/), and then officially released with **Python 3.10** in September 2022.
+
+<base-disclaimer>
+  <base-disclaimer-title>
+    Official Tutorial
+  </base-disclaimer-title>
+  <base-disclaimer-content>
+  The <a href="https://peps.python.org/pep-0636/" target="_blank">PEP 636</a> provides an official tutorial for the Python Pattern matching or Switch-Case statements.
+  </base-disclaimer-content>
+</base-disclaimer>
+
+The [PEP 636](https://peps.python.org/pep-0636/) provides an official tutorial for the Pattern matching or Switch-Case statement.
+
+### Matching single values
+
+```python
+>>> response_code = 201
+>>> match response_code:
+...     case 200:
+...         print("OK")
+...     case 201:
+...         print("Created")
+...     case 300:
+...         print("Multiple Choices")
+...     case 307:
+...         print("Temporary Redirect")
+...     case 404:
+...         print("404 Not Found")
+...     case 500:
+...         print("Internal Server Error")
+...     case 502:
+...         print("502 Bad Gateway")
+...
+# Created
+```
+
+### Matching with the or Pattern
+
+In this example, the pipe character (`|` or `or`) allows python to return the same response for two or more cases.
+
+```python
+>>> response_code = 502
+>>> match response_code:
+...     case 200 | 201:
+...         print("OK")
+...     case 300 | 307:
+...         print("Redirect")
+...     case 400 | 401:
+...         print("Bad Request")
+...     case 500 | 502:
+...         print("Internal Server Error")
+...
+# Internal Server Error
+```
+
+### Matching by the length of an Iterable
+
+```python
+>>> today_responses = [200, 300, 404, 500]
+>>> match today_responses:
+...     case [a]:
+...             print(f"One response today: {a}")
+...     case [a, b]:
+...             print(f"Two responses today: {a} and {b}")
+...     case [a, b, *rest]:
+...             print(f"All responses: {a}, {b}, {rest}")
+...
+# All responses: 200, 300, [404, 500]
+```
+
+### Default value
+
+The underscore symbol (`_`) is used to define a default case:
+
+```python
+>>> response_code = 800
+>>> match response_code:
+...     case 200 | 201:
+...         print("OK")
+...     case 300 | 307:
+...         print("Redirect")
+...     case 400 | 401:
+...         print("Bad Request")
+...     case 500 | 502:
+...         print("Internal Server Error")
+...     case _:
+...         print("Invalid Code")
+...
+# Invalid Code
+```
+
+### Matching Builtin Classes
+
+```python
+>>> response_code = "300"
+>>> match response_code:
+...     case int():
+...             print('Code is a number')
+...     case str():
+...             print('Code is a string')
+...     case _:
+...             print('Code is neither a string nor a number')
+...
+# Code is a string
+```
+
+### Guarding Match-Case Statements
+
+```python
+>>> response_code = 300
+>>> match response_code:
+...     case int():
+...             if response_code > 99 and response_code < 500:
+...                 print('Code is a valid number')
+...     case _:
+...             print('Code is an invalid number')
+...
+# Code is a string
 ```
 
 ## while Loop Statements
@@ -291,7 +422,8 @@ The `range()` function returns a sequence of numbers. It starts from 0, incremen
 The `range()` function can also modify it's 3 defaults arguments. The first two will be the `start` and `stop` values, and the third will be the `step` argument. The step is the amount that the variable is increased by after each iteration.
 
 ```python
->>> for i in range(start=0, stop=10, step=2):
+# range(start, stop, step)
+>>> for i in range(0, 10, 2):
 ...    print(i)
 ...
 # 0
@@ -324,7 +456,7 @@ useful when a `break` condition can occur in the loop:
 >>> for i in [1, 2, 3, 4, 5]:
 ...    if i == 3:
 ...        break
->>> else:
+... else:
 ...    print("only executed when no item is equal to 3")
 ```
 
@@ -338,8 +470,8 @@ useful when a `break` condition can occur in the loop:
 >>> while True:
 ...     feedback = input('Type exit to exit: ')
 ...     if feedback == 'exit':
+...         print(f'You typed {feedback}.')
 ...         sys.exit()
-...     print(f'You typed {feedback}.')
 ...
 # Type exit to exit: open
 # Type exit to exit: close

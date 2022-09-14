@@ -38,7 +38,7 @@ Examples of expressions:
 >>> 2 + 3 * 6
 # 20
 
->>> (2 + 3) \* 6
+>>> (2 + 3) * 6
 # 30
 
 >>> 2 ** 8
@@ -144,7 +144,7 @@ You can name a variable anything as long as it obeys the following rules:
 4. Variable name starting with an underscore (`_`) are considered as "unuseful".
 
 ```python
->>> # _span should not be used again in the code
+>>> # _spam should not be used again in the code
 >>> _spam = 'Hello'
 ```
 

@@ -5,7 +5,7 @@ const route = useRoute()
 
 <template>
   <nav
-    class="sticky top-0 z-40 w-full flex-none border-b border-slate-900/10 bg-white/40 backdrop-blur dark:border-slate-50/[0.06] dark:bg-transparent lg:z-50"
+    class="sticky top-0 z-40 w-full flex-none border-b border-slate-900/10 bg-white/90 backdrop-blur dark:border-slate-50/[0.06] dark:bg-transparent lg:z-50"
   >
     <div class="mx-auto max-w-8xl px-2 sm:px-6 lg:px-12">
       <div class="relative flex h-14 justify-between">
@@ -13,7 +13,7 @@ const route = useRoute()
 
         <!-- menu -->
         <div class="ml-14 flex flex-1 items-center space-x-6 lg:ml-0">
-          <div class="flex flex-shrink-0 items-center">
+          <div class="mr-3 flex flex-shrink-0 items-center">
             <router-link to="/">
               <img
                 class="h-5 w-auto"
@@ -26,6 +26,17 @@ const route = useRoute()
           </div>
 
           <algolia-doc-search />
+
+          <a href="https://news.pythoncheatsheet.org/">
+            <base-badge class="hidden lg:flex">
+              <span class="hidden xl:flex">
+                ✨ The first Issue of the Python Cheatsheet is out!
+              </span>
+              <span class="hidden lg:block xl:hidden">
+                ✨ Issue 1 is out!
+              </span>
+            </base-badge>
+          </a>
         </div>
 
         <!-- actions -->
@@ -61,6 +72,14 @@ const route = useRoute()
                 {{ item.name }}
               </a>
             </template>
+            <a
+              href="https://smartlnks.com/QhT3f"
+              target="_blank"
+              class="inline-flex items-center px-1 pt-1 text-sm font-medium text-slate-700 transition duration-300 hover:text-sky-500 dark:text-gray-200 dark:hover:text-sky-400"
+            >
+              Sponsor
+              <span class="ml-1 text-red-500"> ❤</span>
+            </a>
             <base-reader-mode />
           </div>
 
