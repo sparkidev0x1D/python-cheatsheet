@@ -1,7 +1,4 @@
 <script setup lang="ts">
-import { onMounted } from 'vue'
-import { useDebounceFn } from '@vueuse/core'
-
 const container = ref()
 
 const placeholder = ref(false)
@@ -33,14 +30,14 @@ onMounted(() => {
 <template>
   <div
     v-if="loadCarbon === 'true'"
-    class="relative h-[255px] w-[152px] rounded-md border border-slate-200 bg-slate-50 dark:border-slate-700 dark:bg-slate-800"
+    class="relative flex h-[270px] w-[200px] justify-center rounded-md bg-slate-100/70 dark:border-slate-700 dark:bg-slate-800"
   >
-    <div id="carbonads" ref="container" />
+    <div id="carbonads" ref="container" class="mb-40 h-full" />
 
     <Transition>
       <div
         v-show="placeholder"
-        class="absolute top-0 h-[252px] w-[150px] rounded-md bg-slate-50 dark:border-slate-700 dark:bg-slate-800"
+        class="absolute top-0 h-full w-full rounded-md bg-slate-100/70 dark:border-slate-700 dark:bg-slate-800"
       />
     </Transition>
   </div>

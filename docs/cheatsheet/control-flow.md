@@ -3,7 +3,11 @@ title: Python Control Flow - Python Cheatsheet
 description: Control flow is the order in which individual statements, instructions or function calls are executed or evaluated. The control flow of a Python program is regulated by conditional statements, loops, and function calls.
 ---
 
+<base-title :title="frontmatter.title" :description="frontmatter.description">
+
 # Python Control Flow
+
+</base-title>
 
 <base-disclaimer>
   <base-disclaimer-title>
@@ -81,7 +85,9 @@ The `not` Operator’s _Truth_ Table:
 | `not True`  | `False`      |
 | `not False` | `True`       |
 
-## Mixing Boolean and Comparison Operators
+## Mixing Operators
+
+You can mix boolean and comparison operators:
 
 ```python
 >>> (4 < 5) and (5 < 6)
@@ -94,7 +100,7 @@ False
 True
 ```
 
-You can also use multiple Boolean operators in an expression, along with the comparison operators:
+Also, you can mix use multiple Boolean operators in an expression, along with the comparison operators:
 
 ```python
 >>> 2 + 2 == 4 and not 2 + 2 == 5 and 2 * 2 == 2 + 2
@@ -228,8 +234,6 @@ The _Switch-Case statements_, or **Structural Pattern Matching**, was firstly in
   </base-disclaimer-content>
 </base-disclaimer>
 
-The [PEP 636](https://peps.python.org/pep-0636/) provides an official tutorial for the Pattern matching or Switch-Case statement.
-
 ### Matching single values
 
 ```python
@@ -334,7 +338,7 @@ The underscore symbol (`_`) is used to define a default case:
 ...     case _:
 ...             print('Code is an invalid number')
 ...
-# Code is a string
+# Code is a valid number
 ```
 
 ## while Loop Statements

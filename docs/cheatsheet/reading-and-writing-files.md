@@ -3,14 +3,20 @@ title: Reading and writing files - Python Cheatsheet
 description: To read/write to a file in Python, you will want to use the with statement, which will close the file for you after you are done, managing the available resources for you.
 ---
 
+<base-title :title="frontmatter.title" :description="frontmatter.description">
+
 # Reading and Writing Files
+
+</base-title>
 
 ## The file Reading/Writing process
 
 To read/write to a file in Python, you will want to use the `with`
 statement, which will close the file for you after you are done, managing the available resources for you.
 
-## Opening and reading files with the open() function
+## Opening and reading files
+
+The `open` function opens a file and return a corresponding file object.
 
 ```python
 >>> with open('C:\\Users\\your_home_folder\\hi.txt') as hello_file:
@@ -65,91 +71,3 @@ You can also iterate through the file line by line:
 # Hello world!
 # Bacon is not a vegetable.
 ```
-
-## Saving variables with the shelve module
-
-To save variables:
-
-```python
->>> import shelve
-
->>> cats = ['Zophie', 'Pooka', 'Simon']
->>> with shelve.open('mydata') as shelf_file:
-...     shelf_file['cats'] = cats
-```
-
-To open and read variables:
-
-```python
->>> with shelve.open('mydata') as shelf_file:
-...     print(type(shelf_file))
-...     print(shelf_file['cats'])
-...
-# <class 'shelve.DbfilenameShelf'>
-# ['Zophie', 'Pooka', 'Simon']
-```
-
-Just like dictionaries, `shelf` values have `keys()` and `values()` methods that will return list-like values of the keys and values in the shelf. Since these methods return list-like values instead of true lists, you should pass them to the `list()` function to get them in list form.
-
-```python
->>> with shelve.open('mydata') as shelf_file:
-...     print(list(shelf_file.keys()))
-...     print(list(shelf_file.values()))
-...
-# ['cats']
-# [['Zophie', 'Pooka', 'Simon']]
-```
-
-## Reading ZIP files
-
-```python
->>> import zipfile, os
-
->>> os.chdir('C:\\')    # move to the folder with example.zip
->>> with zipfile.ZipFile('example.zip') as example_zip:
-...     print(example_zip.namelist())
-...     spam_info = example_zip.getinfo('spam.txt')
-...     print(spam_info.file_size)
-...     print(spam_info.compress_size)
-...     print('Compressed file is %sx smaller!' % (round(spam_info.file_size / spam_info.compress_size, 2)))
-...
-# ['spam.txt', 'cats/', 'cats/catnames.txt', 'cats/zophie.jpg']
-# 13908
-# 3828
-# 'Compressed file is 3.63x smaller!'
-```
-
-## Extracting from ZIP Files
-
-The `extractall()` method for ZipFile objects extracts all the files and folders from a ZIP file into the current working directory.
-
-```python
->>> import zipfile, os
-
->>> os.chdir('C:\\')    # move to the folder with example.zip
-
->>> with zipfile.ZipFile('example.zip') as example_zip:
-...     example_zip.extractall()
-```
-
-The `extract()` method for ZipFile objects will extract a single file from the ZIP file:
-
-```python
->>> with zipfile.ZipFile('example.zip') as example_zip:
-...     print(example_zip.extract('spam.txt'))
-...     print(example_zip.extract('spam.txt', 'C:\\some\\new\\folders'))
-...
-# 'C:\\spam.txt'
-# 'C:\\some\\new\\folders\\spam.txt'
-```
-
-## Creating and Adding to ZIP Files
-
-```python
->>> import zipfile
-
->>> with zipfile.ZipFile('new.zip', 'w') as new_zip:
-...     new_zip.write('spam.txt', compress_type=zipfile.ZIP_DEFLATED)
-```
-
-This code will create a new ZIP file named new.zip that has the compressed contents of spam.txt.

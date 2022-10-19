@@ -3,7 +3,11 @@ title: Python Dictionaries - Python Cheatsheet
 description: In Python, a dictionary is an ordered (from Python > 3.7) collection of key, value pairs.
 ---
 
+<base-title :title="frontmatter.title" :description="frontmatter.description">
+
 # Python Dictionaries
+
+</base-title>
 
 In Python, a dictionary is an _ordered_ (from Python > 3.7) collection of `key`: `value` pairs.
 
@@ -19,7 +23,7 @@ In Python, a dictionary is an _ordered_ (from Python > 3.7) collection of `key`:
 Example Dictionary:
 
 ```python
-myCat = {
+my_cat = {
     'size': 'fat',
     'color': 'gray',
     'disposition': 'loud'
@@ -193,7 +197,7 @@ The`clear()` method removes all the items in a dictionary.
 # True
 
 >>> 33 in person.values()
-# False
+# True
 ```
 
 ## Pretty Printing
