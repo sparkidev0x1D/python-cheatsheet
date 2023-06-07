@@ -2,16 +2,91 @@
 title: 'Changelog - Python Cheatsheet'
 description: See what is new, what got fixed, and what is coming.
 date: July 19, 2022
-updated: July 19, 2022
+updated: February 25, 2023
 ---
 
 <base-title :title="frontmatter.title" :description="frontmatter.description">
-
-# Changelog
-
+Changelog
 </base-title>
 
-<!-- ## [Unreleased](https://github.com/wilfredinni/python-cheatsheet/tree/next) -->
+## 2023-04-08
+
+- Added `input` example with `f-strings`. Thanks [@darkpixlz](https://github.com/darkpixlz) ([#204](https://github.com/wilfredinni/python-cheatsheet/pull/204))
+- Added more `OOP` details. Thanks [@noraa-july-stoke](https://github.com/noraa-july-stoke) ([#201](https://github.com/wilfredinni/python-cheatsheet/pull/201))
+
+
+## 2023-03-26
+
+- Added <router-link to='/cheatsheet/oop-basics'>OOP Basics</router-link>. Thanks [@noraa-july-stoke](https://github.com/noraa-july-stoke) ([#194](https://github.com/wilfredinni/python-cheatsheet/pull/194))
+
+## 2023-03-18
+
+- Fixed broken links, capitalization and punctuation consistency. Thanks [@Acumane](https://github.com/Acumane) ([#189](https://github.com/wilfredinni/python-cheatsheet/pull/189))
+- Fixed `fetch-contributors` script crashing on **Renovate** pull requests
+- Fixed `docsearch` not working on development
+- Mayor dependencies upgrades
+
+## 2023-03-16
+
+- Added **open** built-in example. Thanks [@BenIsenstein](https://github.com/BenIsenstein) ([#187](https://github.com/wilfredinni/python-cheatsheet/pull/187))
+
+## 2023-03-05
+
+- Added class-based context manager. Thanks [@asenov](https://github.com/asenov) ([#166](https://github.com/wilfredinni/python-cheatsheet/pull/166))
+
+## 2023-02-25
+
+- Added the if-else statement for List Comprehension. Thanks [@QuarkZ26](https://github.com/QuarkZ26) ([#164](https://github.com/wilfredinni/python-cheatsheet/pull/164))
+
+## 2023-02-21
+
+- Fixed a typo in Virtualenvs. Thanks [@shirinapr](https://github.com/shirinapr) ([#163](https://github.com/wilfredinni/python-cheatsheet/pull/163))
+
+## 2023-02-11
+
+- Added a filter method example for the built-in functions section. Thanks [@firdousmurtaza1](https://github.com/firdousmurtaza1) ([#161](https://github.com/wilfredinni/python-cheatsheet/pull/161))
+
+## 2023-02-05
+
+- Make it clear that the python dictionary is ordered by insertion of key value pairs. Thanks [@wn9237](https://github.com/wn9237) ([#159](https://github.com/wilfredinni/python-cheatsheet/pull/159))
+- Added Dictionary subscription. Thanks [@kakasahebKK](https://github.com/kakasahebKK) ([#158](https://github.com/wilfredinni/python-cheatsheet/pull/158))
+
+## 2023-01-30
+
+- Fixed some mistakes in Dictionaries. Thanks [@Acumane](https://github.com/Acumane) ([#155](https://github.com/wilfredinni/python-cheatsheet/pull/155))
+- Added `map` built-in details and examples. Thanks [@@noraa-july-stoke](https://github.com/noraa-july-stoke) ([#156](https://github.com/wilfredinni/python-cheatsheet/pull/156))
+
+## 2023-01-16
+
+- Added a <new-badge /> badge to highlight new or updated content
+- Added `bytearray` built-in details and examples
+- Added `bytes` built-in details and examples
+- Added `callable` built-in details and examples
+- Added `chr` built-in details and examples
+
+## 2023-01-12
+
+- Fixed a typo on `setup.py` . Thanks [@qkniep](https://github.com/qkniep) ([#154](https://github.com/wilfredinni/python-cheatsheet/pull/154))
+
+## 2022-12-01
+
+- Added **List Comprehension** with `range` example. Thanks [@nugel](https://github.com/nugel) ([#152](https://github.com/wilfredinni/python-cheatsheet/pull/152))
+
+## 2022-11-28
+
+- Added `round` method example. Thanks [@thacer13](https://github.com/thacer13) ([#151](https://github.com/wilfredinni/python-cheatsheet/pull/151))
+- Fixed `List` vs `Tuple` broken link. Thanks [@nugel](https://github.com/nugel) ([#150](https://github.com/wilfredinni/python-cheatsheet/pull/150))
+
+## 2022-11-20
+
+- Added `Dictionary` clarification on `keys`. Thanks [@Yaya9256](https://github.com/Yaya9256) ([#149](https://github.com/wilfredinni/python-cheatsheet/pull/149))
+- Added `title` method on **Manipulating strings**. Thanks [@elp3dr0](https://github.com/elp3dr0) ([2556a0c](https://github.com/wilfredinni/python-cheatsheet/commit/2556a0c849b03353dcaeb4e0a16d77dc6ef978b7))
+- Updated the `changelog` TOC to show only the last 13 updates ([c0f45c3](https://github.com/wilfredinni/python-cheatsheet/commit/ff71cf367bb8ce65ed722094325bad2bc2d56eb9))
+
+## 2022-11-14
+
+- Added <router-link to='/cheatsheet/string-formatting#formatted-string-literals-or-f-strings'>f-Strings</router-link> debugging and formatting options.
+- Fixed several typos. Thanks [@SalvoTr](https://github.com/SalvoTr), [@jkornijchuk](https://github.com/jkornijchuk) and [@Gaurav-jo1](https://github.com/Gaurav-jo1)
 
 ## 2022-10-31
 

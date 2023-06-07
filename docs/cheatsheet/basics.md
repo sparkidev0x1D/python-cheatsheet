@@ -4,9 +4,7 @@ description: The basics of python. We all need to start somewhere, so how about 
 ---
 
 <base-title :title="frontmatter.title" :description="frontmatter.description">
-
-# Python Basics
-
+Python Basics
 </base-title>
 
 We all need to start somewhere, so how about doing it here.
@@ -20,11 +18,9 @@ We all need to start somewhere, so how about doing it here.
   </base-disclaimer-content>
 </base-disclaimer>
 
-<!-- For a more complete list of resources, check the article [Who to Follow, What to Read and Where to Ask](https://www.pythoncheatsheet.org/blog/python-follow-read-and-ask/). -->
-
 ## Math Operators
 
-From **Highest** to **Lowest** precedence:
+From **highest** to **lowest** precedence:
 
 | Operators | Operation         | Example         |
 | --------- | ----------------- | --------------- |
@@ -104,7 +100,7 @@ String concatenation:
 # 'AliceBob'
 ```
 
-String Replication:
+String replication:
 
 ```python
 >>> 'Alice' * 5
@@ -241,6 +237,16 @@ This function takes the input from the user and converts it into a string:
 # What is your name? Martha
 # Hi, Martha
 ```
+
+It is also possible to use formatted strings to avoid using .format:
+
+```python
+>>> my_name = input('What is your name? ')  # default message
+>>> print(f'Hi, {my_name}')
+# What is your name? Martha
+# Hi, Martha
+```
+
 
 ## The len() Function
 

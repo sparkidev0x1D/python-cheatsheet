@@ -4,9 +4,7 @@ description: While Python's context managers are widely used, few understand the
 ---
 
 <base-title :title="frontmatter.title" :description="frontmatter.description">
-
-# Python Context Manager
-
+Python Context Manager
 </base-title>
 
 While Python's context managers are widely used, few understand the purpose behind their use. These statements, commonly used with reading and writing files, assist the application in conserving system memory and improve resource management by ensuring specific resources are only in use for certain processes.
@@ -47,4 +45,24 @@ It is also possible to write a context manager using generator syntax thanks to 
 # Enter
 # Right in the middle with cm = 3
 # Exit
+```
+
+
+## Class based context manager
+
+You can define class based context manager. The key methods are `__enter__` and `__exit__`
+```python
+class ContextManager:
+    def __enter__(self, *args, **kwargs):
+        print("--enter--")
+
+    def __exit__(self, *args):
+        print("--exit--")
+
+
+with ContextManager():
+    print("test")
+#--enter--
+#test
+#--exit--
 ```

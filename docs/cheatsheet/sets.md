@@ -4,9 +4,7 @@ description: Python comes equipped with several built-in data types to help us o
 ---
 
 <base-title :title="frontmatter.title" :description="frontmatter.description">
-
-# Python Sets
-
+Python Sets
 </base-title>
 
 Python comes equipped with several built-in data types to help us organize our data. These structures include lists, dictionaries, tuples and **sets**.
@@ -112,7 +110,7 @@ Both methods will remove an element from the set, but `remove()` will raise a `k
 
 ## set union()
 
-`union()` or `|` will create a new set that with all the elements from the sets provided.
+`union()` or `|` will create a new set with all the elements from the sets provided.
 
 ```python
 >>> s1 = {1, 2, 3}

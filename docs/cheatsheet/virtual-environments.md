@@ -4,9 +4,7 @@ description: The use of a Virtual Environment is to test python code in encapsul
 ---
 
 <base-title :title="frontmatter.title" :description="frontmatter.description">
-
-# Virtual Environment
-
+Virtual Environment
 </base-title>
 
 The use of a Virtual Environment is to test python code in encapsulated environments, and to also avoid filling the base Python installation with libraries we might use for only one project.
@@ -23,9 +21,9 @@ The use of a Virtual Environment is to test python code in encapsulated environm
 
 Usage:
 
-1.  Make a Virtual Environment named `HelloWold`
+1.  Make a Virtual Environment named `HelloWorld`
 
-        mkvirtualenv HelloWold
+        mkvirtualenv HelloWorld
 
     Anything we install now will be specific to this project. And available to the projects we connect to this environment.
 
@@ -45,9 +43,9 @@ Usage:
 
 1.  Workon
 
-    Open up the command prompt and type `workon HelloWold` to activate the environment and move into your root project folder
+    Open up the command prompt and type `workon HelloWorld` to activate the environment and move into your root project folder
 
-        workon HelloWold
+        workon HelloWorld
 
 ## Poetry
 

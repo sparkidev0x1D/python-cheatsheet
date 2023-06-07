@@ -1,5 +1,5 @@
 <template>
-  <a href="https://www.netlify.com" target="_blank">
+  <a href="https://www.netlify.com/" rel="noreferrer" target="_blank">
     <img
       src="/netlify.svg"
       loading="lazy"

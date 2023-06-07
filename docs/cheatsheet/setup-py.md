@@ -4,9 +4,7 @@ description: The setup script is the centre of all activity in building, distrib
 ---
 
 <base-title :title="frontmatter.title" :description="frontmatter.description">
-
-# Python setup.py
-
+Python setup.py
 </base-title>
 
 <base-warning>
@@ -14,7 +12,7 @@ description: The setup script is the centre of all activity in building, distrib
     A 'controversial' opinion
   </base-warning-title>
   <base-warning-content>
-    Using `setup.py` to pack and distribute your python packages can be quite challenging every so often. Tools like <a target="_blank" href="https://python-poetry.org/">Poetry</a> make not only the packaging a <b>lot easy</b>, but also help you to manage your dependencies in a very convenient way.
+    Using `setup.py` to pack and distribute your python packages can be quite challenging every so often. Tools like <a target="_blank" href="https://python-poetry.org/">Poetry</a> make not only the packaging a <b>lot easier</b>, but also help you to manage your dependencies in a very convenient way.
   </base-warning-content>
 </base-warning>
 

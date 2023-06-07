@@ -20,7 +20,7 @@ defineProps<{
       <p class="mt-4 font-display text-base text-slate-900 dark:text-white">
         <a v-if="isExternal" target="_blank" :href="path">
           <span class="absolute -inset-px rounded-xl" />
-          View on GitHub
+          {{ title }}
         </a>
         <router-link v-else :to="path">
           <span class="absolute -inset-px rounded-xl" />
