@@ -1,13 +1,15 @@
 <script setup lang="ts">
 const navigation = useNavigationStore()
 const route = useRoute()
+const isDark = useDark()
+
+// const timeAgo = useTimeAgo(new Date(2023, 12, 29, 15, 15))
 </script>
 
 <template>
   <nav
     class="sticky top-0 z-40 w-full flex-none border-b border-slate-900/10 bg-white/90 backdrop-blur dark:border-slate-50/[0.06] dark:bg-transparent lg:z-50"
   >
-    <kinsta-banner />
     <div class="mx-auto max-w-8xl px-2 sm:px-6 lg:px-12">
       <div class="relative flex h-14 justify-between">
         <the-sidebar-mobile />
@@ -17,8 +19,12 @@ const route = useRoute()
           <div class="mr-3 flex flex-shrink-0 items-center">
             <router-link to="/">
               <img
-                class="h-5 w-auto"
-                src="https://raw.githubusercontent.com/wilfredinni/merken/master/static/merken/img/snake.svg"
+                class="h-7 w-auto"
+                :src="
+                  isDark
+                    ? 'https://raw.githubusercontent.com/wilfredinni/python-cheatsheet/refs/heads/master/public/logo.svg'
+                    : 'https://raw.githubusercontent.com/wilfredinni/python-cheatsheet/refs/heads/master/public/logo-light.svg'
+                "
                 alt="python-cheatsheet"
                 height="10"
                 width="10"
@@ -28,13 +34,24 @@ const route = useRoute()
 
           <algolia-doc-search />
 
-          <a href="https://news.pythoncheatsheet.org/" rel="noreferrer">
-            <base-badge class="hidden lg:flex">
-              <span class="hidden xl:flex">
-                ✨ Read the latest Python Cheatsheet Issue!
-              </span>
-              <span class="hidden lg:block xl:hidden"> ✨ Latest Issue </span>
-            </base-badge>
+          <a
+            href="https://www.javascriptcheatsheet.org/"
+            class="hidden xl:flex"
+          >
+            <base-badge-notice size="xs">
+              <template #title>
+                <span class="capitalize"> new website </span>
+              </template>
+              <template #message>
+                ✨ javascriptcheatsheet.org
+                <span class="mx-1">·</span>
+                <img
+                  src="https://www.javascriptcheatsheet.org/icons/javascript_logo.png"
+                  alt="javascript cheatsheet"
+                  class="h-4 w-4 rounded"
+                />
+              </template>
+            </base-badge-notice>
           </a>
         </div>
 

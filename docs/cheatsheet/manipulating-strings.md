@@ -292,3 +292,41 @@ An optional second argument to `rjust()` and `ljust()` will specify a fill chara
 >>> spam.strip('ampS')
 # 'BaconSpamEggs'
 ```
+
+## The Count Method
+
+Counts the number of occurrences of a given character or substring in the string it is applied to. Can be optionally provided start and end index.
+
+```python
+>>> sentence = 'one sheep two sheep three sheep four'
+>>> sentence.count('sheep')
+# 3
+
+>>> sentence.count('e')
+# 9
+
+>>> sentence.count('e', 6)
+# 8
+# returns count of e after 'one sh' i.e 6 chars since beginning of string
+
+>>> sentence.count('e', 7)
+# 7
+```
+
+## Replace Method
+
+Replaces all occurences of a given substring with another substring. Can be optionally provided a third argument to limit the number of replacements. Returns a new string.
+
+```python
+>>> text = "Hello, world!"
+>>> text.replace("world", "planet")
+# 'Hello, planet!'
+
+>>> fruits = "apple, banana, cherry, apple"
+>>> fruits.replace("apple", "orange", 1)
+# 'orange, banana, cherry, apple'
+
+>>> sentence = "I like apples, Apples are my favorite fruit"
+>>> sentence.replace("apples", "oranges")
+# 'I like oranges, Apples are my favorite fruit'
+```

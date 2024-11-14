@@ -9,6 +9,89 @@ updated: February 25, 2023
 Changelog
 </base-title>
 
+## 2024-09-29
+
+- Fixed missing DocSearch style. Thanks [@xcsnowcity](https://github.com/xcsnowcity)
+
+## 2024-09-28
+
+- New logo image added to the website
+
+## 2024-09-22
+
+- Updated dependencies to the latest versions.
+
+## 2024-08-11
+
+- Added Examples and description for range() function. Thanks [@johntheholman](https://github.com/johntheholman)
+- Updated dependencies to the latest versions.
+
+## 2024-08-03
+
+- Added 2 examples of using delatrr() function. Thanks [@lukaszwojcik89](https://github.com/lukaszwojcik89)
+- Updated dependencies to the latest versions.
+- Updated contributors list.
+
+## 2024-04-14
+
+- Fixed broken link in setup.py. Thanks [@damiankrolik](https://github.com/damiankrolik)
+- Fixed a typo in main section. Thanks [@pranayat](https://github.com/pranayat)
+- Fixed typo and titles in sets section. Thanks [@decodingchris](https://github.com/decodingchris)
+
+## 2024-01-29
+
+- Added `getattr` built-in. Thanks [@HasnatHridoy](https://github.com/HasnatHridoy)
+
+## 2024-01-18
+
+- Added compile built-in function.
+- Added Augmented Assignment Operators. Thanks [@richjohnsonxyz](https://github.com/richjohnsonxyz)
+- Updated dependencies to the latest versions.
+
+## 2023-12-02
+
+- Updated dependencies to the latest versions.
+
+## 2023-10-30
+
+- Fix `f-string` format in `os.walk` example. Thanks [@LairdStreak](https://github.com/LairdStreak)
+
+## 2023-10-27
+
+- Added `classmethod` built in decorator. Thanks [@classic-arnold](https://github.com/classic-arnold)
+- Added `staticmethod` built in decorator. Thanks [@LairdStreak](https://github.com/LairdStreak)
+- Added string `replace` method to string manipulation. Thanks [@madeelchaudhary](https://github.com/madeelchaudhary)
+
+## 2023-10-13
+
+- Added examples for Boolean Operators. Thanks [@omii2k01](https://github.com/omii2k01)
+- Added `count` string method. Thanks [@omii2k01](https://github.com/omii2k01)
+- Added multiple exceptions handling. Thanks [@LairdStreak](https://github.com/LairdStreak)
+- Fixed grammatical error for the contributing page description. [@AdamRosas27](https://github.com/AdamRosas27)
+- Fixed typo in control flow page. [@supersandra](https://github.com/supersandra)
+- Updated dependencies to the latest versions.
+
+## 2023-09-19
+
+- Added `walrus` Operator. Thanks [@omii2k01](https://github.com/omii2k01)
+
+## 2023-08-26
+
+- Added `dir` built in function.
+
+## 2023-08-06
+
+- Added `exec` built in function.
+
+## 2023-07-15
+
+- Added `copy` module to modules section. Thanks [@MozarM](https://github.com/MozarM)
+
+## 2023-07-12
+
+- Added examples for built-in `format`, `issubclass`, `locals`, `pow`, `range`, `vars`. Thanks [@vaibhavb02](https://github.com/vaibhavb02)
+- Upgraded dependencies to the latest version.
+
 ## 2023-06-11
 
 - Fixed a typo in Sets. Thanks [@alvyynm](https://github.com/alvyynm) ([#252](https://github.com/wilfredinni/python-cheatsheet/pull/252))
@@ -18,7 +101,6 @@ Changelog
 
 - Added `input` example with `f-strings`. Thanks [@darkpixlz](https://github.com/darkpixlz) ([#204](https://github.com/wilfredinni/python-cheatsheet/pull/204))
 - Added more `OOP` details. Thanks [@noraa-july-stoke](https://github.com/noraa-july-stoke) ([#201](https://github.com/wilfredinni/python-cheatsheet/pull/201))
-
 
 ## 2023-03-26
 

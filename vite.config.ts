@@ -8,7 +8,7 @@ import Components from 'unplugin-vue-components/vite'
 import { HeadlessUiResolver } from 'unplugin-vue-components/resolvers'
 import AutoImport from 'unplugin-auto-import/vite'
 import { VitePWA } from 'vite-plugin-pwa'
-import Markdown from 'vite-plugin-vue-markdown'
+import Markdown from 'unplugin-vue-markdown/vite'
 import Prism from 'markdown-it-prism'
 import LinkAttributes from 'markdown-it-link-attributes'
 import string from 'string'
@@ -25,11 +25,11 @@ export default defineConfig(({ mode }) => {
 
     server: {
       proxy: {
-        '/api': {
-          target: process.env.VITE_CURATED_ENDPOINT,
+        '/newsletter': {
+          target: process.env.VITE_GRUDGET_ENDPOINT,
           changeOrigin: true,
           secure: false,
-          rewrite: (path) => path.replace(/^\/api/, ''),
+          rewrite: (path) => path.replace(/^\/newsletter/, ''),
         },
       },
     },
@@ -37,7 +37,7 @@ export default defineConfig(({ mode }) => {
     plugins: [
       vue({
         include: [/\.vue$/, /\.md$/],
-        reactivityTransform: true,
+        // reactivityTransform: true,
       }),
 
       // https://github.com/hannoeru/vite-plugin-pages

@@ -3,12 +3,8 @@ import { acceptHMRUpdate, defineStore } from 'pinia'
 export const useNavigationStore = defineStore('navigation', {
   state: () => ({
     navbarNavigation: [
+      { name: 'Newsletter', path: '/newsletter', internal: true },
       { name: 'Blog', path: '/blog', internal: true },
-      {
-        name: 'Newsletter',
-        path: 'https://news.pythoncheatsheet.org/',
-        internal: false,
-      },
     ],
     mainNavigation: [
       {
@@ -18,6 +14,10 @@ export const useNavigationStore = defineStore('navigation', {
       {
         name: 'Contributing',
         path: '/contributing',
+      },
+      {
+        name: 'Changelog',
+        path: '/changelog',
       },
     ],
     cheatsheetNavigation: [
@@ -55,7 +55,7 @@ export const useNavigationStore = defineStore('navigation', {
       {
         name: 'Sets',
         path: '/cheatsheet/sets',
-        updated: true,
+        updated: false,
       },
       {
         name: 'Comprehensions',
@@ -108,6 +108,11 @@ export const useNavigationStore = defineStore('navigation', {
         updated: false,
       },
       {
+        name: 'Decorators',
+        path: '/cheatsheet/decorators',
+        updated: false,
+      },
+      {
         name: 'Context manager',
         path: '/cheatsheet/context-manager',
         updated: false,
@@ -140,6 +145,11 @@ export const useNavigationStore = defineStore('navigation', {
     ],
     standardLibraryNavigation: [
       {
+        name: 'Copy',
+        path: '/modules/copy-module',
+        updated: false,
+      },
+      {
         name: 'Datetime',
         path: '/modules/datetime-module',
       },
@@ -152,16 +162,17 @@ export const useNavigationStore = defineStore('navigation', {
         path: '/modules/json-module',
       },
       {
-        name: 'Random',
-        path: '/modules/random-module',
-      },
-      {
         name: 'Os',
         path: '/modules/os-module',
+        updated: false,
       },
       {
         name: 'Pathlib',
         path: '/modules/pathlib-module',
+      },
+      {
+        name: 'Random',
+        path: '/modules/random-module',
       },
       {
         name: 'Shelve',

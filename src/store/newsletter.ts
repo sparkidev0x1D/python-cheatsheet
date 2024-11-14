@@ -1,8 +1,9 @@
 import { acceptHMRUpdate, defineStore } from 'pinia'
-import { $fetch } from 'ohmyfetch'
+import { ofetch } from 'ofetch'
 
 interface newsletterResponse {
   id?: number
+  newsletter?: string
   email?: string
   error_message?: string
   errors?: string[]
@@ -20,20 +21,19 @@ export const useNewsletterStore = defineStore('useNewsletterStore', {
 
   actions: {
     async subscribe(email: string) {
-      const curatedKey = import.meta.env.VITE_CURATED_KEY || null
+      const grudgetToken = import.meta.env.VITE_GRUDGET_TOKEN || null
+      const baseUrl = import.meta.env.VITE_GRUDGET_ENDPOINT || null
+      const newsletter = import.meta.env.VITE_GRUDGET_NEWSLETTER || null
 
-      const response = await $fetch(
-        `/api/publications/16436/email_subscribers`,
-        {
-          method: 'POST',
-          body: { email: email },
-          headers: {
-            Accept: 'application/json',
-            'Content-type': 'application/json',
-            Authorization: `Token token="${curatedKey}"`,
-          },
-        }
-      ).catch((error) => error.data)
+      const response = await ofetch(`${baseUrl}/subscriber/`, {
+        method: 'POST',
+        body: { email: email, newsletter: newsletter },
+        headers: {
+          Accept: 'application/json',
+          'Content-type': 'application/json',
+          Authorization: `token ${grudgetToken}`,
+        },
+      }).catch((error) => error.data)
 
       this.response = response
     },

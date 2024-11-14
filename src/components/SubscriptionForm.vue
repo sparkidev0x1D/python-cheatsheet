@@ -1,5 +1,7 @@
 <script setup lang="ts">
+// const showNewsletterForm = useLocalStorage('showNewsletterForm', true)
 const showSubscription = import.meta.env.VITE_NEWSLETTER === 'true' || false
+const showNewsletterForm = ref(true)
 
 const reader = useReaderStore()
 const newsletter = useNewsletterStore()
@@ -13,16 +15,14 @@ const subscribe = async () => {
 }
 
 const response = computed(() => newsletter.getResponse)
-
-const showNewsletterForm = useLocalStorage('showNewsletterForm', true)
 </script>
 
 <template>
   <div
-    v-if="showSubscription && !reader.isActive && showNewsletterForm"
-    class="mb-8 rounded-xl border border-slate-300/70 bg-slate-50 px-5 py-5 dark:border-transparent dark:bg-slate-800"
+    v-if="showNewsletterForm && showSubscription && !reader.isActive"
+    class="mb-8 rounded-xl border border-slate-300/70 bg-slate-50 px-5 py-6 dark:border-transparent dark:bg-slate-800"
   >
-    <div class="flex justify-end">
+    <div v-if="false" class="flex justify-end">
       <button @click="showNewsletterForm = false">
         <span class="sr-only">close</span>
         <svg
@@ -44,11 +44,16 @@ const showNewsletterForm = useLocalStorage('showNewsletterForm', true)
     >
       Subscribe to pythoncheatsheet.org
     </p>
+
     <prose>
       <p class="text-center text-slate-700 dark:text-slate-400 sm:text-start">
-        A weekly and bullshit free
-        <a href="https://news.pythoncheatsheet.org/" rel="noreferrer"
-          >publication</a
+        Join
+        <span class="text-sky-400 font-semibold">
+          10.900+ Python developers
+        </span>
+        in a two times a month and bullshit free
+        <router-link to="/newsletter" rel="noreferrer">
+          publication </router-link
         >, full of interesting, relevant links.
       </p>
     </prose>
@@ -94,18 +99,14 @@ const showNewsletterForm = useLocalStorage('showNewsletterForm', true)
     </form>
 
     <template v-if="response?.email">
-      <p
-        class="mx-3 mt-3 text-center text-sm font-medium text-sky-700 dark:text-sky-400"
-      >
+      <p class="mx-3 mt-2 text-sm font-medium text-sky-700 dark:text-sky-400">
         Thank you for subscribing! Please check your email to confirm your
         subscription. Be sure to check your junk folder.
       </p>
     </template>
 
-    <template v-else-if="response?.success == false">
-      <p
-        class="mt-2 text-center text-sm font-medium text-sky-700 dark:text-sky-400"
-      >
+    <template v-else-if="response?.errors">
+      <p class="mt-2 text-sm font-medium text-sky-700 dark:text-sky-400">
         You are already subscribed. Thanks!
       </p>
     </template>
